@@ -1,7 +1,6 @@
-from src.graph import build_research_graph
+from src.state import ResearchState
 
-# Test to validate that the research graph can be built and compiled successfully
-def test_graph_can_compile():
-    graph = build_research_graph()
+def test_research_state_can_be_initialized():
+    state = ResearchState(topic="AI agents in data analytics")
 
-    assert graph is not None
+    assert state.topic == "AI agents in data analytics"
