@@ -5,11 +5,13 @@ langchain-ollama
 
 python-dotenv
 streamlit
+reportlab
 tavily-python
 pydantic
 
 sentence-transformers
 torchvision
+torch
 
 duckduckgo-search
 ddgs

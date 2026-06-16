@@ -12,7 +12,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen2.5:7b-instruct")
 
 llm = ChatOllama(
     model=OLLAMA_MODEL,
