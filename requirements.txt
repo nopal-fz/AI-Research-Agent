@@ -7,5 +7,9 @@ python-dotenv
 streamlit
 tavily-python
 pydantic
+
+sentence-transformers
+torchvision
+
 duckduckgo-search
 ddgs

@@ -22,7 +22,7 @@ def searcher_node(state: ResearchState) -> dict:
         return {"search_results": []}
 
     all_results: list[dict[str, Any]] = []
-    max_results_per_query = 3
+    max_results_per_query = 5
 
     try:
         with DDGS() as ddgs:
