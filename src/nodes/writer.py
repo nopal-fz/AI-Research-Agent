@@ -16,7 +16,7 @@ OLLAMA_MODEL = os.getenv("OLLAMA_MODEL")
 
 llm = ChatOllama(
     model=OLLAMA_MODEL,
-    temperature=0.2
+    temperature=0
 )
 
 writer_prompt = ChatPromptTemplate.from_messages(
@@ -84,6 +84,13 @@ def writer_node(state: ResearchState) -> dict:
     """
 
     logger.info("Running writer node")
+    
+    if not state.is_valid_topic:
+        logger.warning("Invalid research topic. Returning validation message.")
+        
+        return {
+            "final_report": state.final_report or state.validation_message
+        }
 
     if not state.source_summaries:
         logger.warning("No source summaries found. Generating limited report.")
