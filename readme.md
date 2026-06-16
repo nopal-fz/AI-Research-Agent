@@ -94,9 +94,12 @@ ai-research-agent/
 ├── requirements.txt
 ├── README.md
 ├── .env.example
+├── scripts/
+│   ├── run_demo_graph.py
 ├── src/
 │   ├── state.py
 │   ├── graph.py
+│   ├── report.py
 │   └── nodes/
 │       ├── validator.py
 │       ├── planner.py
@@ -107,6 +110,7 @@ ai-research-agent/
 ├── tests/
 │   ├── test_state.py
 │   └── test_graph.py
+│   └── test_validator.py
 └── .github/
     └── workflows/
         └── ci.yml
