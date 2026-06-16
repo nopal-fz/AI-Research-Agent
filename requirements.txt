@@ -7,3 +7,5 @@ python-dotenv
 streamlit
 tavily-python
 pydantic
+duckduckgo-search
+ddgs
